@@ -190,6 +190,8 @@
     <Compile Include="Models\Relatos.cs">
       <DependentUpon>ModelDBSessioMobile.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Request\LoginRequest.cs" />
+    <Compile Include="Models\Response\Response.cs" />
     <Compile Include="Models\Usuario.cs">
       <DependentUpon>ModelDBSessioMobile.tt</DependentUpon>
     </Compile>
