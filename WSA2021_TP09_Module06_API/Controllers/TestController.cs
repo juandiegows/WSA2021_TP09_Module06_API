@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace WSA2021_TP09_Module06_API.Controllers
 {
-    public class ValuesController : ApiController
+    public class TestController : ApiController
     {
         // GET api/values
         public IEnumerable<string> Get()

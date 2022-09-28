@@ -22,9 +22,18 @@ namespace WSA2021_TP09_Module06_API.Controllers
         /// get a list of users
         /// </summary>
         /// <returns></returns>
-        public IQueryable<Usuario> GetUsuario()
+        public IHttpActionResult GetUsuario()
         {
-            return db.Usuario;
+            return Ok(db.Usuario.ToList().Select(x => new
+            {
+                x.id,
+                x.nome,
+                x.email,
+                x.funcaoid,
+                x.Funcao.funcao1,
+                x.telefone
+
+            }).ToList());
         }
         /// <summary>
         /// allows the user to login
@@ -33,27 +42,36 @@ namespace WSA2021_TP09_Module06_API.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("api/auth")]
-        public Response Login([FromBody] LoginRequest login)
+        public IHttpActionResult Login([FromBody] LoginRequest login)
         {
-            var user = db.Usuario.FirstOrDefault(x => (x.email.ToLower().Equals(login.Username.ToLower()) || x.nome.ToLower().Equals(login.Username.ToLower()) && x.senha == login.Password));
+            var user = db.Usuario.ToList().Where(x => (x.email.ToLower().Equals(login.Username.ToLower()) || x.nome.ToLower().Equals(login.Username.ToLower())) && x.senha == login.Password).ToList().FirstOrDefault();
 
             if (user == null)
             {
-                return new Response
+                return Content(HttpStatusCode.Unauthorized, new Response
                 {
                     Sucess = false,
                     Data = null,
                     Message = "user or password incorrecto"
-                };
+                });
             }
             else
             {
-                return new Response
+                return Ok(new Response
                 {
-                    Sucess = false,
-                    Data = user,
+                    Sucess = true,
+                    Data = new
+                    {
+                        user.id,
+                        user.nome,
+                        user.email,
+                        user.funcaoid,
+                        user.Funcao.funcao1,
+                        user.telefone
+
+                    },
                     Message = "login success"
-                };
+                });
             }
 
         }
@@ -67,7 +85,16 @@ namespace WSA2021_TP09_Module06_API.Controllers
                 return NotFound();
             }
 
-            return Ok(usuario);
+            return Ok(new
+            {
+                usuario.id,
+                usuario.nome,
+                usuario.email,
+                usuario.funcaoid,
+                usuario.Funcao.funcao1,
+                usuario.telefone
+
+            });
         }
 
         // PUT: api/Usuarios/5
