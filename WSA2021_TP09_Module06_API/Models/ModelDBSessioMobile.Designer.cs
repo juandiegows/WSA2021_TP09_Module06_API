@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Sena\source\repos\WSA2021_TP09_Module06_API\WSA2021_TP09_Module06_API\Models\ModelDBSessioMobile.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\mejia\Source\Repos\WSA2021_TP09_Module06_API\WSA2021_TP09_Module06_API\Models\ModelDBSessioMobile.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

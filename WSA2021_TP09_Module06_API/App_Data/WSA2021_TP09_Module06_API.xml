@@ -481,5 +481,18 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:WSA2021_TP09_Module06_API.Controllers.UsuariosController.GetUsuario">
+            <summary>
+            get a list of users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WSA2021_TP09_Module06_API.Controllers.UsuariosController.Login(WSA2021_TP09_Module06_API.Models.Request.LoginRequest)">
+            <summary>
+            allows the user to login
+            </summary>
+            <param name="login"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
