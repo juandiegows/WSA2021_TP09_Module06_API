@@ -31,8 +31,7 @@ namespace WSA2021_TP09_Module06_API.Controllers
                 x.email,
                 x.funcaoid,
                 x.Funcao.funcao1,
-                x.telefone
-
+                x.telefone,
             }).ToList());
         }
         /// <summary>
@@ -59,16 +58,16 @@ namespace WSA2021_TP09_Module06_API.Controllers
             {
                 return Ok(new Response
                 {
-                    Sucess = true,
+                    
+                    Sucess = false,
                     Data = new
                     {
                         user.id,
                         user.nome,
-                        user.email,
                         user.funcaoid,
+                        user.email,
                         user.Funcao.funcao1,
-                        user.telefone
-
+                        user.telefone,
                     },
                     Message = "login success"
                 });
@@ -92,8 +91,7 @@ namespace WSA2021_TP09_Module06_API.Controllers
                 usuario.email,
                 usuario.funcaoid,
                 usuario.Funcao.funcao1,
-                usuario.telefone
-
+                usuario.telefone,
             });
         }
 
