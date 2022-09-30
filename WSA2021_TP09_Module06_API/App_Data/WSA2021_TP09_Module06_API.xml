@@ -494,5 +494,75 @@
             <param name="login"></param>
             <returns></returns>
         </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelato">
+             <summary>
+            Represents a strongly typed in-memory cache of data.
+            </summary>
+        </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelato.RelatosDataTable">
+             <summary>
+            Represents the strongly named DataTable class.
+            </summary>
+        </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelato.RelatosRow">
+             <summary>
+            Represents strongly named DataRow class.
+            </summary>
+        </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelato.RelatosRowChangeEvent">
+             <summary>
+            Row event argument class
+            </summary>
+        </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.RelatosTableAdapter">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.RelatosJD">
+             <summary>
+            Represents the connection and commands used to retrieve and save data.
+            </summary>
+        </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.TableAdapterManager">
+             <summary>
+            TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+            </summary>
+        </member>
+        <member name="M:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.TableAdapterManager.UpdateUpdatedRows(WSA2021_TP09_Module06_API.Models.DBRelato,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Update rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.TableAdapterManager.UpdateInsertedRows(WSA2021_TP09_Module06_API.Models.DBRelato,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Insert rows in top-down order.
+            </summary>
+        </member>
+        <member name="M:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.TableAdapterManager.UpdateDeletedRows(WSA2021_TP09_Module06_API.Models.DBRelato,System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Delete rows in bottom-up order.
+            </summary>
+        </member>
+        <member name="M:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+             <summary>
+            Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+            </summary>
+        </member>
+        <member name="M:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.TableAdapterManager.UpdateAll(WSA2021_TP09_Module06_API.Models.DBRelato)">
+             <summary>
+            Update all changes to the dataset.
+            </summary>
+        </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.TableAdapterManager.UpdateOrderOption">
+             <summary>
+            Update Order Option
+            </summary>
+        </member>
+        <member name="T:WSA2021_TP09_Module06_API.Models.DBRelatoTableAdapters.TableAdapterManager.SelfReferenceComparer">
+             <summary>
+            Used to sort self-referenced table's rows
+            </summary>
+        </member>
     </members>
 </doc>

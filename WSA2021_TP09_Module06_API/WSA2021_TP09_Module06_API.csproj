@@ -164,10 +164,16 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RelatosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DBRelato.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBRelato.xsd</DependentUpon>
     </Compile>
     <Compile Include="Models\Funcao.cs">
       <DependentUpon>ModelDBSessioMobile.tt</DependentUpon>
@@ -244,6 +250,17 @@
     </EntityDeploy>
     <Content Include="Models\ModelDBSessioMobile.edmx.diagram">
       <DependentUpon>ModelDBSessioMobile.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DBRelato.xsc">
+      <DependentUpon>DBRelato.xsd</DependentUpon>
+    </Content>
+    <None Include="Models\DBRelato.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBRelato.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Models\DBRelato.xss">
+      <DependentUpon>DBRelato.xsd</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
